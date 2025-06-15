@@ -1,0 +1,116 @@
+@import './assets/base.css';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* Video Conference Dark theme color palette - Google Meet inspired */
+  --vc-dark-bg-primary: #202124;
+  --vc-dark-bg-secondary: #303134;
+  --vc-dark-bg-tertiary: #3c4043;
+  --vc-dark-surface: #292a2d;
+  --vc-dark-surface-variant: #35363a;
+  --vc-dark-border: #5f6368;
+  --vc-dark-border-light: #404144;
+  
+  --vc-text-primary: #e8eaed;
+  --vc-text-secondary: #9aa0a6;
+  --vc-text-muted: #5f6368;
+  
+  --vc-accent-blue: #8ab4f8;
+  --vc-accent-blue-hover: #aecbfa;
+  --vc-accent-green: #81c995;
+  --vc-accent-red: #f28b82;
+  --vc-accent-yellow: #fdd663;
+  
+  --vc-button-primary: #1a73e8;
+  --vc-button-primary-hover: #1557b0;
+  --vc-button-secondary: #3c4043;
+  --vc-button-secondary-hover: #48494d;
+  
+  --vc-overlay-dark: rgba(32, 33, 36, 0.9);
+  --vc-overlay-light: rgba(255, 255, 255, 0.1);
+  
+  --vc-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --vc-shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --vc-shadow-heavy: 0 8px 24px rgba(0, 0, 0, 0.5);
+  
+  color: var(--vc-text-primary);
+  background-color: var(--vc-dark-bg-primary);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--vc-dark-bg-primary);
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Custom scrollbar for dark theme */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: var(--vc-dark-border);
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: var(--vc-text-muted);
+}
+
+/* Focus ring for accessibility - dark theme */
+*:focus {
+  outline: 2px solid var(--vc-accent-blue);
+  outline-offset: 2px;
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/* Ensure proper text scaling */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <div class="join-container">
-    <img src="@/assets/moqtail.svg" alt="MoqTail Logo" class="join-logo" />
+    <img src="../assets/moqtail.svg" alt="MoqTail Logo" class="join-logo" />
     <div class="join-content">
       <nav class="join-nav">
         <RouterLink to="/">Home</RouterLink>
@@ -34,7 +34,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
-import { useSessionStore } from '@/stores/sessionStore'
+import { useSessionStore } from '../stores/sessionStore'
 
 const router = useRouter()
 const sessionStore = useSessionStore()
@@ -147,14 +147,14 @@ h2 {
 
 @font-face {
   font-family: 'MoqBold';
-  src: url('@/assets/Bold.ttf') format('truetype');
+  src: url('../assets/Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MoqSemiBold';
-  src: url('@/assets/SemiBold.ttf') format('truetype');
+  src: url('../assets/SemiBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

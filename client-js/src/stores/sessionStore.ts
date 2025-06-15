@@ -1,4 +1,3 @@
-// src/stores/sessionStore.ts
 import { defineStore } from 'pinia'
 
 interface User {
